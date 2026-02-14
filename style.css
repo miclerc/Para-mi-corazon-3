@@ -1,0 +1,111 @@
+/* ---------------- 기본 설정 ---------------- */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffd6e8, #ffeaf4);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* 전체 화면 컨테이너 */
+#screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+/* ---------------- 1번 화면 ---------------- */
+.title {
+    font-size: 2.8rem;
+    color: #4a4a4a;
+    letter-spacing: 1px;
+}
+
+/* ---------------- 2번 & 2.5번 타이핑 ---------------- */
+.typing {
+    font-size: 1.8rem;
+    border-right: 2px solid #444;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #4a4a4a;
+}
+
+/* ---------------- 3번 화면 (시 카드) ---------------- */
+.pink-box {
+    background: white;
+    width: 65%;
+    max-width: 700px;
+    max-height: 75vh;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    font-size: 10pt;
+    line-height: 1.8;
+    text-align: left;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* 스크롤바 스타일 */
+.pink-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.pink-box::-webkit-scrollbar-thumb {
+    background: #ffc2da;
+    border-radius: 10px;
+}
+
+/* 등장 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------------- 4번 화면 ---------------- */
+
+/* 상단 흰 카드 */
+.top-card {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 12px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* 중앙 회색 카드 */
+.timer-card {
+    background: #f2f2f2;
+    padding: 40px 60px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 디지털 타이머 */
+.timer {
+    font-size: 3rem; /* 기존보다 약 10pt 이상 크게 */
+    font-weight: 500;
+    color: #555;
+    letter-spacing: 2px;
+    text-align: center;
+}
